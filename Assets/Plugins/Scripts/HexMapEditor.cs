@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class HexMapEditor : MonoBehaviour {
 
 	public Color[] colors;
+    public string[] buildings;
 
 	public HexGrid hexGrid;
 
@@ -11,6 +12,7 @@ public class HexMapEditor : MonoBehaviour {
     int activeWaterLevel;
 
     Color activeColor;
+    string activeBuilding;
 
 	int brushSize;
 
@@ -32,6 +34,7 @@ public class HexMapEditor : MonoBehaviour {
 		applyColor = index >= 0;
 		if (applyColor) {
 			activeColor = colors[index];
+            activeBuilding = buildings[index];
 		}
 	}
 
@@ -139,6 +142,7 @@ public class HexMapEditor : MonoBehaviour {
 		if (cell) {
 			if (applyColor) {
 				cell.Color = activeColor;
+                cell.building = activeBuilding;
 			}
 			if (applyElevation) {
 				cell.Elevation = activeElevation;

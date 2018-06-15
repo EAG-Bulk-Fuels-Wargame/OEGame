@@ -21,7 +21,7 @@ public class HexGrid : MonoBehaviour {
     public Color pipeline;
     public HexCell[] cells;
     HexGridChunk[] chunks;
-    List<Unit> units;
+    public List<Unit> units;
     GameObject[] cities;
     public Collider2D cellCollider;
     public Collider2D unitCollider;
@@ -57,7 +57,8 @@ public class HexGrid : MonoBehaviour {
 
         populateCellData(cells, ocean, city, power, nuclear, airport, pipeline);
 
-        render3d();
+        foreach (HexCell cell in cells)
+            cell.render();
     }
 
     void CreateChunks () {

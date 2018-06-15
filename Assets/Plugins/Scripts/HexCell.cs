@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class HexCell : MonoBehaviour {
 
@@ -8,10 +9,88 @@ public class HexCell : MonoBehaviour {
     public string building;
     public string name;
     public bool hasUnit = false;
+    public HexGrid hexGrid;
+    public GameObject Airport;
+    public GameObject City;
+    public GameObject Coal;
+    public GameObject Nuclear;
+    public GameObject Oil;
+    public HexGridChunk chunk;
 
-	public HexGridChunk chunk;
+    public void render()
+    {
+        if (building == "city")
+        {
+            Vector3 pos;
+            pos.x = transform.position.x;
+            pos.y = transform.position.y;
+            pos.z = transform.position.z - 10;
 
-	public Color Color {
+            Debug.Log(pos.x + "," + pos.y + "," + pos.z);
+
+            GameObject cityInstance = Instantiate(City) as GameObject;
+            cityInstance.transform.localPosition = pos;
+            cityInstance.transform.SetParent(transform);
+            pos.z = transform.position.z;
+        }
+        else if (building == "airport")
+        {
+            Vector3 pos;
+            pos.x = transform.position.x;
+            pos.y = transform.position.y + 1;
+            pos.z = transform.position.z;
+
+            GameObject airportInstance = Instantiate(Airport) as GameObject;
+            airportInstance.transform.localPosition = pos;
+            airportInstance.transform.SetParent(transform);
+        }
+
+        else if (building == "nuclear")
+        {
+            Vector3 pos;
+            pos.x = transform.position.x +5;
+            pos.y = transform.position.y ;
+            pos.z = transform.position.z -10;
+
+            GameObject nuclearInstance = Instantiate(Nuclear) as GameObject;
+            nuclearInstance.transform.localPosition = pos;
+            nuclearInstance.transform.SetParent(transform);
+
+        }
+
+        else if (building == "fuel")
+        {
+            Vector3 pos;
+            pos.x = transform.position.x -25;
+            pos.y = transform.position.y ;
+            pos.z = transform.position.z -22;
+
+            GameObject fuelInstance = Instantiate(Oil) as GameObject;
+            fuelInstance.transform.localPosition = pos;
+            fuelInstance.transform.SetParent(transform);
+        }
+        else if (building == "power")
+        {
+            Vector3 pos;
+            pos.x = transform.position.x;
+            pos.y = transform.position.y ;
+            pos.z = transform.position.z -15;
+            GameObject coalInstance = Instantiate(Coal) as GameObject;
+            coalInstance.transform.localPosition = pos;
+            coalInstance.transform.SetParent(transform);
+        }
+    }
+
+    private void Update()
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+        render();
+    }
+
+    public Color Color {
 		get {
 			return color;
 		}
