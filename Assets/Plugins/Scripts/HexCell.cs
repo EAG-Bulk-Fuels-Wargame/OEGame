@@ -1,12 +1,17 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using System.Xml.Serialization;
+using System.IO;
 
-public class HexCell : MonoBehaviour {
+public class HexCell:MonoBehaviour{
 
     public HexCoordinates coordinates;
     public RectTransform uiRect;
+    [XmlElement("t")]
     public string type;
+    [XmlElement("b")]
     public string building;
+    [XmlElement("n")]
     public string name;
     public bool hasUnit = false;
     public HexGrid hexGrid;
@@ -17,6 +22,8 @@ public class HexCell : MonoBehaviour {
     public GameObject Oil;
     public HexGridChunk chunk;
 
+    
+
     public void render()
     {
         if (building == "city")
@@ -26,7 +33,7 @@ public class HexCell : MonoBehaviour {
             pos.y = transform.position.y;
             pos.z = transform.position.z - 10;
 
-            Debug.Log(pos.x + "," + pos.y + "," + pos.z);
+            //Debug.Log(pos.x + "," + pos.y + "," + pos.z);
 
             GameObject cityInstance = Instantiate(City) as GameObject;
             cityInstance.transform.localPosition = pos;

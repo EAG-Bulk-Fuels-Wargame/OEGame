@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using System.IO;
+using System.Xml.Serialization;
 
 public class HexMapEditor : MonoBehaviour {
 
@@ -170,4 +172,35 @@ public class HexMapEditor : MonoBehaviour {
 			}
 		}
 	}
+    public void Save()
+    {
+        Debug.Log(Application.persistentDataPath);
+        string path = Path.Combine(Application.persistentDataPath, "test.eag");
+        Stream fileStream = File.Open(path, FileMode.Create);
+        fileStream.Close();
+        using (
+            BinaryWriter writer =
+                new BinaryWriter(File.Open(path, FileMode.Create))
+        ) { }
+
+        foreach (HexCell cell in hexGrid.cells)
+            HexMapEditor.Serialize(cell, "Cell Data.xml");
+    }
+
+    public void Load()
+    {
+        string path = Path.Combine(Application.persistentDataPath, "test.map");
+        using (BinaryReader reader = new BinaryReader(File.OpenRead(path)))
+        {
+            Debug.Log(reader.ReadInt32());
+        }
+    }
+
+    public static void Serialize(object item, string path)
+    {
+        XmlSerializer serializer = new XmlSerializer(item.GetType());
+        StreamWriter writer = new StreamWriter(path);
+        serializer.Serialize(writer.BaseStream, item);
+        writer.Close();
+    }
 }

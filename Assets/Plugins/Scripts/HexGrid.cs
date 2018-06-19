@@ -86,6 +86,7 @@ public class HexGrid : MonoBehaviour {
 		HexMetrics.noiseSource = noiseSource;
 	}
 
+
 	public HexCell GetCell (Vector3 position) {
 		position = transform.InverseTransformPoint(position);
 		HexCoordinates coordinates = HexCoordinates.FromPosition(position);
@@ -302,73 +303,5 @@ public class HexGrid : MonoBehaviour {
         cells[247].Color = pipeline;
         cells[247].name = "Pipeline Station";
         cells[247].building = "pipeline";
-    }
-
-    void render3d()
-    {
-        for (int i = 0; i < cellCountX * cellCountZ - 1; i++)
-        {
-            if (cells[i].building == "city")
-            {
-                Vector3 pos;
-                pos.x = cells[i].transform.position.x;
-                pos.y = cells[i].transform.position.y;
-                pos.z = cells[i].transform.position.z - 10;
-
-
-                Debug.Log(pos.x + "," + pos.y + "," + pos.z);
-
-                Instantiate(City);
-                units.Add(Instantiate<Unit>(unitPrefab));
-                City.transform.localPosition = pos;
-                pos.z = cells[i].transform.position.z;
-                units[units.Count - 1].transform.localPosition = pos;
-                GetCell(pos).hasUnit = true;
-            }
-            if (cells[i].building == "airport")
-            {
-                Vector3 pos;
-                pos.x = cells[i].transform.position.x;
-                pos.y = cells[i].transform.position.y + 1;
-                pos.z = cells[i].transform.position.x;
-
-                Instantiate(Airport);
-                Airport.transform.localPosition = pos;
-            }
-
-            if (cells[i].building == "nuclear")
-            {
-                Vector3 pos;
-                pos.x = cells[i].transform.position.x + 5;
-                pos.y = cells[i].transform.position.y + 1;
-                pos.z = cells[i].transform.position.z - 18;
-
-                Instantiate(Nuclear);
-                Nuclear.transform.localPosition = pos;
-
-            }
-
-            if (cells[i].building == "fuel")
-            {
-                Vector3 pos;
-                pos.x = cells[i].transform.position.x - 25;
-                pos.y = cells[i].transform.position.y + 1;
-                pos.z = cells[i].transform.position.z - 22;
-
-                Instantiate(Oil);
-                Oil.transform.localPosition = pos;
-            }
-            if (cells[i].building == "power")
-            {
-                Vector3 pos;
-                pos.x = cells[i].transform.position.x;
-                pos.y = cells[i].transform.position.y + 1;
-                pos.z = cells[i].transform.position.z - 15;
-                Instantiate(Coal);
-                Coal.transform.localPosition = pos;
-            }
-
-
-        }
     }
 }
