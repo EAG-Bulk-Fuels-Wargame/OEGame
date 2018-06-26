@@ -5,13 +5,12 @@ using System.IO;
 
 public class HexCell:MonoBehaviour{
 
+    public HexCellData data = new HexCellData();
+
     public HexCoordinates coordinates;
     public RectTransform uiRect;
-    [XmlElement("t")]
     public string type;
-    [XmlElement("b")]
     public string building;
-    [XmlElement("n")]
     public string name;
     public bool hasUnit = false;
     public HexGrid hexGrid;
@@ -21,8 +20,9 @@ public class HexCell:MonoBehaviour{
     public GameObject Nuclear;
     public GameObject Oil;
     public HexGridChunk chunk;
-
+    public int cellNum;
     
+    int[] neighborNum = new int[6];
 
     public void render()
     {
@@ -88,6 +88,11 @@ public class HexCell:MonoBehaviour{
         }
     }
 
+    private void Awake()
+    {
+        for (int i = 0; i < 6; i++)
+            neighborNum[i] = int.MaxValue;
+    }
     private void Update()
     {
         foreach (Transform child in transform)
@@ -246,21 +251,37 @@ public class HexCell:MonoBehaviour{
 
 	bool hasIncomingRiver, hasOutgoingRiver;
 	HexDirection incomingRiver, outgoingRiver;
-
-	[SerializeField]
-	HexCell[] neighbors;
-
+	
+    
 	[SerializeField]
 	bool[] roads;
+    public HexCell[] neighbors;
 
-	public HexCell GetNeighbor (HexDirection direction) {
+    public HexCell GetNeighbor (HexDirection direction) {
+        Debug.Log("direction at get: "+(int)direction);
 		return neighbors[(int)direction];
 	}
 
 	public void SetNeighbor (HexDirection direction, HexCell cell) {
 		neighbors[(int)direction] = cell;
+        Debug.Log((int)direction);
+        neighborNum[(int)direction] = cell.cellNum;
 		cell.neighbors[(int)direction.Opposite()] = this;
+        cell.neighborNum[(int)direction.Opposite()] = cellNum;
 	}
+
+    public void SetNeighborsFromData(int[] neighborNums)
+    {
+        HexGrid hexgr = GameObject.FindWithTag("Grid").GetComponent<HexGrid>();
+        for(int i = 0; i < neighborNums.Length; i ++)
+        {
+            Debug.Log("neighbor nums at "+ i +": "+neighborNums[i]);
+            Debug.Log("# of cells in grid: " + hexgr.cells.Count);
+            bool neighborsBoolCheck = (neighborNums[i] != int.MaxValue);
+            if (neighborNums[i] != int.MaxValue)
+                neighbors[i] = hexgr.cells[neighborNums[i]];
+        }
+    }
 
 	public HexEdgeType GetEdgeType (HexDirection direction) {
 		return HexMetrics.GetEdgeType(
@@ -408,4 +429,89 @@ public class HexCell:MonoBehaviour{
             return waterLevel > elevation;
         }
     }
+
+    public void StoreData()
+    {
+        data.type = type;
+        data.building = building;
+        data.name = name;
+        data.roads = roads;
+        data.xpos = coordinates.X;
+        data.ypos = coordinates.Y;
+        data.zpos = coordinates.Z;
+        data.x = transform.position.x;
+        data.y = transform.position.y;
+        data.z = transform.position.z;
+        data.cellNum = cellNum;
+        data.neighbors = neighborNum;
+    }
+
+    public void LoadData()
+    {
+        type = data.type;
+        building = data.building;
+        name = data.name;
+        roads = data.roads;
+        coordinates = HexCoordinates.FromOffsetCoordinates(data.xpos, data.zpos);
+        cellNum = data.cellNum;
+        Vector3 pos;
+        pos.x = data.x;
+        pos.y = data.y;
+        pos.z = data.z;
+        transform.localPosition = pos;
+        neighborNum = data.neighbors;
+    }
+
+    public void OnEnable()
+    {
+        SaveData.OnLoaded += delegate { LoadData(); };
+        SaveData.OnBeforeSave += delegate { StoreData(); };
+        SaveData.OnBeforeSave += delegate { SaveData.AddCellData(data); };
+    }
+
+    public void OnDisable()
+    {
+        SaveData.OnLoaded += delegate { LoadData(); };
+        SaveData.OnBeforeSave += delegate { StoreData(); };
+        SaveData.OnBeforeSave += delegate { SaveData.AddCellData(data); };
+    }
+}
+public class HexCellData
+{
+    [XmlAttribute("Type")]
+    public string type;
+    [XmlAttribute("Building")]
+    public string building;
+    [XmlAttribute("Name")]
+    public string name;
+    [XmlElement("Roads")]
+    public bool[] roads;
+    [XmlElement("xpos")]
+    public int xpos;
+    [XmlElement("ypos")]
+    public int ypos;
+    [XmlElement("zpos")]
+    public int zpos;
+    [XmlElement("x")]
+    public float x;
+    [XmlElement("y")]
+    public float y;
+    [XmlElement("z")]
+    public float z;
+    [XmlElement("cellNum")]
+    public int cellNum;
+    [XmlArray("neighbors")]
+    public int[] neighbors;
+}
+
+[XmlRoot("HexCellCollection")]
+public class HexCellContainer
+{
+    [XmlElement("cellcountx")]
+    public int cellcountx;
+    [XmlElement("cellcounty")]
+    public int cellcounty;
+    [XmlArray("HexCells")]
+    [XmlArrayItem("HexCell")]
+    public List<HexCellData> cells = new List<HexCellData>();
 }

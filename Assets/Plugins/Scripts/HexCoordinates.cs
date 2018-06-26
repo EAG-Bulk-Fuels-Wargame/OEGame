@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 
-[System.Serializable]
 public struct HexCoordinates {
 
-	[SerializeField]
-	private int x, z;
+    private int x, z;
 
 	public int X {
 		get {
@@ -32,6 +30,7 @@ public struct HexCoordinates {
 	public static HexCoordinates FromOffsetCoordinates (int x, int z) {
 		return new HexCoordinates(x - z / 2, z);
 	}
+
 
 	public static HexCoordinates FromPosition (Vector3 position) {
 		float x = position.x / (HexMetrics.innerRadius * 2f);

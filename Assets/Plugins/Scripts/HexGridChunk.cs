@@ -1,23 +1,24 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class HexGridChunk : MonoBehaviour {
 
     public HexMesh terrain, rivers, roads, water, waterShore;
 
-    HexCell[] cells;
+    public List<HexCell> cells;
 
 	Canvas gridCanvas;
 
 	void Awake () {
 		gridCanvas = GetComponentInChildren<Canvas>();
 
-		cells = new HexCell[HexMetrics.chunkSizeX * HexMetrics.chunkSizeZ];
+		cells = new List<HexCell>();
 		ShowUI(false);
 	}
 
-	public void AddCell (int index, HexCell cell) {
-		cells[index] = cell;
+	public void AddCell (HexCell cell) {
+        cells.Add(cell);
 		cell.chunk = this;
 		cell.transform.SetParent(transform, false);
 		cell.uiRect.SetParent(gridCanvas.transform, false);
@@ -43,7 +44,7 @@ public class HexGridChunk : MonoBehaviour {
         roads.Clear();
         water.Clear();
         waterShore.Clear();
-        for (int i = 0; i < cells.Length; i++)
+        for (int i = 0; i < cells.Count; i++)
         {
             Triangulate(cells[i]);
         }
