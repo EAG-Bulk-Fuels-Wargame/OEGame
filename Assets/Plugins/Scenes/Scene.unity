@@ -1252,7 +1252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9753f667ae5a60e44bbf619b072df3c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Words: []
 --- !u!1 &401651774
 GameObject:
   m_ObjectHideFlags: 0
@@ -6158,8 +6157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f456a8dd464678746a10fc4fc4e04cde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionPopupPrefab: {fileID: 1492195439563688, guid: a9bc0767948c06b40b269f9c585d00da,
-    type: 2}
+  ActionPopUpPrefab: {fileID: 0}
 --- !u!114 &1599885339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8628,7 +8626,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 0.58
+  m_ScaleFactor: 0.53
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0

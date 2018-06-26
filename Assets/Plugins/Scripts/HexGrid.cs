@@ -56,7 +56,6 @@ public class HexGrid : MonoBehaviour {
         airport = new Color(.1F, .9F, .9F, 1);
         pipeline = new Color(.3F, .3F, 1F, 1);
 
-
         CreateChunks();
         CreateCells();
         populateCellData(cells, ocean, city, power, nuclear, airport, pipeline);
@@ -101,7 +100,6 @@ public class HexGrid : MonoBehaviour {
         {
             HexCell cell = cells[j];
             HexCellData data = container.cells[j];
-            Debug.Log("Setting neighbors");
             cell.SetNeighborsFromData(data.neighbors);
             
         }

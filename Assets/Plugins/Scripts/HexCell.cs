@@ -24,7 +24,7 @@ public class HexCell:MonoBehaviour{
     
     int[] neighborNum = new int[6];
 
-    public void render()
+    public void render() //Places buildings on cells of proper type
     {
         if (building == "city")
         {
@@ -51,7 +51,6 @@ public class HexCell:MonoBehaviour{
             airportInstance.transform.localPosition = pos;
             airportInstance.transform.SetParent(transform);
         }
-
         else if (building == "nuclear")
         {
             Vector3 pos;
@@ -64,7 +63,6 @@ public class HexCell:MonoBehaviour{
             nuclearInstance.transform.SetParent(transform);
 
         }
-
         else if (building == "fuel")
         {
             Vector3 pos;
@@ -88,21 +86,23 @@ public class HexCell:MonoBehaviour{
         }
     }
 
-    private void Awake()
+    private void Awake() 
     {
+        //Fills the neighborNum list with garbage that can be filtered out later
         for (int i = 0; i < 6; i++)
             neighborNum[i] = int.MaxValue;
     }
+
     private void Update()
     {
+        //Wipes out building models
         foreach (Transform child in transform)
-        {
             Destroy(child.gameObject);
-        }
+        //Replaces models
         render();
     }
 
-    public Color Color {
+    public Color Color { //Accessor for color
 		get {
 			return color;
 		}
@@ -114,8 +114,7 @@ public class HexCell:MonoBehaviour{
 			Refresh();
 		}
 	}
-
-	public int Elevation {
+	public int Elevation { //Accessor for elevation
 		get {
 			return elevation;
 		}
@@ -123,6 +122,8 @@ public class HexCell:MonoBehaviour{
 			if (elevation == value) {
 				return;
 			}
+
+            //Changes elevation based on HexMetrics standards
 			elevation = value;
 			Vector3 position = transform.localPosition;
 			position.y = value * HexMetrics.elevationStep;
@@ -131,10 +132,12 @@ public class HexCell:MonoBehaviour{
 				HexMetrics.elevationPerturbStrength;
 			transform.localPosition = position;
 
+            //repositions ui labels
 			Vector3 uiPosition = uiRect.localPosition;
 			uiPosition.z = -position.y;
 			uiRect.localPosition = uiPosition;
 
+            //breaks rivers and roads
 			if (
 				hasOutgoingRiver &&
 				elevation < GetNeighbor(outgoingRiver).elevation
@@ -153,42 +156,41 @@ public class HexCell:MonoBehaviour{
 					SetRoad(i, false);
 				}
 			}
-
 			Refresh();
 		}
-	}
+	} 
 
-	public bool HasIncomingRiver {
+	public bool HasIncomingRiver { //Getter for hasIncomingRiver
 		get {
 			return hasIncomingRiver;
 		}
 	}
 
-	public bool HasOutgoingRiver {
+	public bool HasOutgoingRiver { //Getter for hasIncomingRiver
 		get {
 			return hasOutgoingRiver;
 		}
 	}
 
-	public bool HasRiver {
+	public bool HasRiver { //Returns true if a river is present
 		get {
 			return hasIncomingRiver || hasOutgoingRiver;
 		}
 	}
 
-	public bool HasRiverBeginOrEnd {
+	public bool HasRiverBeginOrEnd { //Returns true of a river origin is present
 		get {
 			return hasIncomingRiver != hasOutgoingRiver;
 		}
-	}
+	} 
 
-	public HexDirection RiverBeginOrEndDirection {
+	public HexDirection RiverBeginOrEndDirection { //Returns direction of river
 		get {
 			return hasIncomingRiver ? incomingRiver : outgoingRiver;
 		}
-	}
+	} 
 
-	public bool HasRoads {
+	public bool HasRoads {  //Returns true if roads are present
 		get {
 			for (int i = 0; i < roads.Length; i++) {
 				if (roads[i]) {
@@ -199,26 +201,25 @@ public class HexCell:MonoBehaviour{
 		}
 	}
 
-	public HexDirection IncomingRiver {
+	public HexDirection IncomingRiver { //Returns direction  of incoming river
 		get {
 			return incomingRiver;
 		}
-	}
+	} 
 
-	public HexDirection OutgoingRiver {
+	public HexDirection OutgoingRiver { //Returns direction of outgoing river 
 		get {
 			return outgoingRiver;
 		}
-	}
+	} 
 
-	public Vector3 Position {
+	public Vector3 Position { //Returns position of cell in worldspace
 		get {
 			return transform.localPosition;
 		}
 	}
 
-    public float RiverSurfaceY
-    {
+    public float RiverSurfaceY { //Returns elevation of river surface
         get
         {
             return
@@ -227,8 +228,8 @@ public class HexCell:MonoBehaviour{
         }
     }
 
-    public float WaterSurfaceY
-    {
+    public float WaterSurfaceY 
+    { //Returns elevation of water
         get
         {
             return
@@ -237,8 +238,9 @@ public class HexCell:MonoBehaviour{
         }
     }
 
-    public float StreamBedY {
-		get {
+    public float StreamBedY
+    { //Returns elevation of streambed
+        get {
 			return
 				(elevation + HexMetrics.streamBedElevationOffset) *
 				HexMetrics.elevationStep;
@@ -257,27 +259,24 @@ public class HexCell:MonoBehaviour{
 	bool[] roads;
     public HexCell[] neighbors;
 
-    public HexCell GetNeighbor (HexDirection direction) {
+    public HexCell GetNeighbor (HexDirection direction) { //Returns neighboring cell at direction
         Debug.Log("direction at get: "+(int)direction);
 		return neighbors[(int)direction];
 	}
 
-	public void SetNeighbor (HexDirection direction, HexCell cell) {
+	public void SetNeighbor (HexDirection direction, HexCell cell) { //Sets the neighbor in a given direction
 		neighbors[(int)direction] = cell;
-        Debug.Log((int)direction);
-        neighborNum[(int)direction] = cell.cellNum;
-		cell.neighbors[(int)direction.Opposite()] = this;
-        cell.neighborNum[(int)direction.Opposite()] = cellNum;
+        neighborNum[(int)direction] = cell.cellNum; //Stores neighbor's number in array
+		cell.neighbors[(int)direction.Opposite()] = this; //Sets neighbor of neighboring cell to this one
+        cell.neighborNum[(int)direction.Opposite()] = cellNum; //Stores this cell's number in array of neighbor
 	}
 
-    public void SetNeighborsFromData(int[] neighborNums)
+    public void SetNeighborsFromData(int[] neighborNums) //Takes list of neighbor numbers and assigns the corresponding cells as neighbors
     {
         HexGrid hexgr = GameObject.FindWithTag("Grid").GetComponent<HexGrid>();
         for(int i = 0; i < neighborNums.Length; i ++)
         {
-            Debug.Log("neighbor nums at "+ i +": "+neighborNums[i]);
-            Debug.Log("# of cells in grid: " + hexgr.cells.Count);
-            bool neighborsBoolCheck = (neighborNums[i] != int.MaxValue);
+            //checks if there's actually a neighbor or just garbage
             if (neighborNums[i] != int.MaxValue)
                 neighbors[i] = hexgr.cells[neighborNums[i]];
         }

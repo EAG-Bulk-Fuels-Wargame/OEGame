@@ -3,42 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InfoBarScript : MonoBehaviour
-{
+public class InfoBarScript : MonoBehaviour {
 
-    string uiText;
-    public Text[] Words;
+    Text[] Words;
     HexGrid hexgrid = new HexGrid();
     HexCell currentHex;
 
-    // Use this for initialization
-    void Start()
-    {
-        //Debug.LogError("Screen Width : " + Screen.width);
-        //Debug.LogError("Screen height: " + Screen.height);
+	// Use this for initialization
+	void Start () {
 
-
-        //Text words = GameObject.FindWithTag("UIBar").GetComponent<Text>();
-        //Words[0].rectTransform.sizeDelta = new Vector2(1, 16);
-        //Words[1].rectTransform.sizeDelta = new Vector2(1, 16);
 
     }
 
-    public string getText()
-    {
-        //Vector3 posa = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //float x = posa.x;
-        //float y = posa.y;
-        //Debug.Log("X = " + x + " Y = " + y);
-        //hexgrid.GetCell(posa);
-        string s = "Hello World";
-        return s;
-    }
-
-    public HexCell getMouseCell()
-    {
+    public HexCell GetMouseCell() {
+        //returns the HexCell clicked by the mouse
         HexGrid hexgr = GameObject.FindWithTag("Grid").GetComponent<HexGrid>();
-        HexGridChunk hexCh = GameObject.FindWithTag("Chunk").GetComponent<HexGridChunk>();
+        HexGridChunk hexch = GameObject.FindWithTag("Chunk").GetComponent<HexGridChunk>();
 
         HexCell h = null;
         Ray inputRay = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -60,7 +40,7 @@ public class InfoBarScript : MonoBehaviour
             c.b *= 1.2F;
             h.Color = c;
             currentHex = h;
-            hexCh.Refresh();
+            hexch.Refresh();
         }
         return h;
     }
@@ -68,77 +48,88 @@ public class InfoBarScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Creates text size and location
         Image s = GameObject.FindWithTag("UIBar").GetComponent<Image>();
         s.rectTransform.sizeDelta = new Vector2(Screen.width, Screen.height / 8);
         s.rectTransform.position = new Vector2(Screen.width / 2, Screen.height / 16);
         Words = s.GetComponentsInChildren<Text>();
         float height = s.rectTransform.sizeDelta.y;
         float width = s.rectTransform.sizeDelta.x;
-        Words[0].rectTransform.position = new Vector2((int)(Words[0].rectTransform.position.x), (int)(s.rectTransform.position.y + 10));
-        Words[1].rectTransform.position = new Vector2((int)(Words[1].rectTransform.position.x), (int)(s.rectTransform.position.y + 10));
-        while ((Words[0].preferredHeight) * 1.4 < height / 2 && (Words[0].preferredWidth) * 1.4 < width / 2)
+        Words[0].fontSize = 20;
+        if ((Words[0].preferredWidth) * 1.4 < width / 2)
         {
-            Words[0].fontSize++;
+            Words[0].fontSize+=2;
         }
-        while (Words[0].preferredHeight > height / 2 || Words[0].preferredWidth > width / 2)
+        if (Words[0].preferredWidth > width/8)
         {
-            Words[0].fontSize--;
-
+            Words[0].fontSize-=2;
         }
-        while ((Words[1].preferredHeight) * 1.4 < height / 2 && (Words[1].preferredWidth) * 1.4 < width / 2)
+        //Cell Clicked
+        if (GetMouseCell() != null && Input.GetMouseButton(0))
         {
-            Words[1].fontSize++;
-        }
-        while (Words[1].preferredHeight > height / 2 || Words[1].preferredWidth > width / 2)
-        {
-            Words[1].fontSize--;
+            Words[0].text = ("<b>Name:</b> " + GetMouseCell().name + " \t <b>Building:</b> " + GetMouseCell().building + "\t <b>Terrain:</b> " + GetTerrain(GetMouseCell().Color));
+            //UnitAction(GetMouseCell(),new Unit());
         }
 
-        uiText = getText();
-        if (getMouseCell() != null && Input.GetMouseButton(0))
-        {
-            Words[0].text = ("<b>Name:</b> " + getMouseCell().name + " \t <b>Building:</b> " + getMouseCell().building + "\t <b>Terrain:</b> " + getTerrain(getMouseCell().Color));
-            Words[1].text = ("You are at cell: " + getMouseCell().Position);
-        }
     }
 
-    public string getTerrain(Color col)
-    {
-        List<Color> terrainType = new List<Color>(9);
-        List<string> terrainName = new List<string>(9);
-        terrainName.Add("grass");
-        terrainName.Add("breakaway");
-        terrainName.Add("ocean");
-        terrainName.Add("city");
-        terrainName.Add("power");
-        terrainName.Add("nuclear");
-        terrainName.Add("fuel");
-        terrainName.Add("airport");
-        terrainName.Add("pipeline");
-        terrainType.Add(new Color(.61F, .7F, .5F, 1));
-        terrainType.Add(new Color(1, .6F, .6F, 1));
-        terrainType.Add(new Color(.2F, .2F, 1F, 1));
-        terrainType.Add(new Color(.5F, .5F, .5F, 1));
-        terrainType.Add(new Color(1F, .54F, 0, 1));
-        terrainType.Add(new Color(1F, 1F, 0, 1));
-        terrainType.Add(new Color(1F, .75F, .80F, 1));
-        terrainType.Add(new Color(.2F, 1F, 1F, 1));
-        terrainType.Add(new Color(.3F, .3F, 1F, 1));
-        //breakaway = new Color(1, .6F, .6F, 1);
-        //ocean = new Color(.2F, .2F, 1F, 1);
-        //city = new Color(.5F, .5F, .5F, 1);
-        //power = new Color(1F, .54F, 0, 1);
-        //nuclear = new Color(1F, 1F, 0, 1);
-        //fuel = new Color(1F, .75F, .80F, 1);
-        //airport = new Color(.2F, 1F, 1F, 1);
-        //pipeline = new Color(.3F, .3F, 1F, 1);
+    public void UnitAction(HexCell h, Unit u) {
+        //Call when a unit action should take place and bring up a popup
+        Vector2 vector = new Vector2(0,0);
+        ActionProcess.MakeAction(vector,GetOptions(h,u),GetScenarioName(h,u));
+    }
+
+    public List<string> GetOptions(HexCell h, Unit u) {
+        List<string> s = new List<string>();
+        //add some conditions for what should be added to the options list
+        //i.e. "Embark" only available if on coastal tile.
+        s.Add("Fight");
+        s.Add("Flee");
+        s.Add("Fortify");
+        return s;
+    }
+
+    public string GetScenarioName(HexCell h, Unit u) {
+        string s;
+        //add some conditions to see what scenario the unit's interaction is.
+        //i.e. An air unit's version of "Fight" will be different from a land unit.
+        //so call the scenario something like "Air_Combat"
+        s = "Default_Combat";
+        return s;
+    }
+
+    public string GetTerrain(Color col) {
+        //Changes the color of the tile selected to be brighter and returns the
+        //terrain type of the tile.
+        List<Color> terrainType = new List<Color>(9)
+        {
+            new Color(.61F, .7F, .5F, 1),
+            new Color(1, .6F, .6F, 1),
+            new Color(.2F, .2F, 1F, 1),
+            new Color(.5F, .5F, .5F, 1),
+            new Color(1F, .54F, 0, 1),
+            new Color(1F, 1F, 0, 1),
+            new Color(1F, .75F, .80F, 1),
+            new Color(.2F, 1F, 1F, 1),
+            new Color(.3F, .3F, 1F, 1)
+        };
+        List<string> terrainName = new List<string>(9)
+        {
+            "grass",
+            "breakaway",
+            "ocean",
+            "city",
+            "power_someotherwordsthatmakethislong",
+            "nuclear",
+            "fuel",
+            "airport",
+            "pipeline"
+        };
         col.r /= 1.2F;
         col.g /= 1.2F;
         col.b /= 1.2F;
-        for (int i = 0; i < terrainType.Count; i++)
-        {
-            if (col == terrainType[i])
-            {
+        for (int i = 0; i < terrainType.Count; i++) {
+            if (col == terrainType[i]) {
                 return (terrainName[i]);
             }
         }
