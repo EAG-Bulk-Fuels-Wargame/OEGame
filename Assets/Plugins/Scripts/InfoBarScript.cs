@@ -11,7 +11,10 @@ public class InfoBarScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+        //Instantiate(Resources.Load("UnitP"));
+        HexGrid hexgr = GameObject.FindWithTag("Grid").GetComponent<HexGrid>();
+        Unit p = new Unit("Temp Soldier", hexgr.cells[50], "land", 100, 50);
+        Debug.LogError("health = " + p.GetLocation());
 
     }
 
