@@ -2,46 +2,43 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HexGrid : MonoBehaviour {
-
-    int cellCountX, cellCountZ;
-    public int chunkCountX = 1, chunkCountZ = 1;
-    public int unitCount;
-    public HexCell cellPrefab;
-    public Unit unitPrefab;
-    public Text cellLabelPrefab;
-    public Color defaultColor;
-    public Color breakaway;
-    public Color ocean;
-    public Color city;
-    public Color power;
-    public Color nuclear;
-    public Color fuel;
+public class HexGrid : MonoBehaviour
+{
     public Color airport;
-    public Color pipeline;
-    public List<HexCell> cells;
-    HexGridChunk[] chunks;
-    public List<Unit> units;
-    GameObject[] cities;
-    public Collider2D cellCollider;
-    public Collider2D unitCollider;
     public GameObject Airport;
+    public Color breakaway;
+    public Collider2D cellCollider;
+    public Text cellLabelPrefab;
+    public HexCell cellPrefab;
+    public List<HexCell> cells;
+    public int chunkCountX = 1, chunkCountZ = 1;
+    public HexGridChunk chunkPrefab;
+    public Color city;
     public GameObject City;
     public GameObject Coal;
-    public GameObject Nuclear;
-    public GameObject Oil;
+    public Color defaultColor;
+    public Color fuel;
     public Texture2D noiseSource;
-    public HexGridChunk chunkPrefab;
+    public Color nuclear;
+    public GameObject Nuclear;
+    public Color ocean;
+    public GameObject Oil;
+    public Color pipeline;
+    public Color power;
+    public Collider2D unitCollider;
+    public int unitCount;
+    public Unit unitPrefab;
+    public List<Unit> units;
+    private int cellCountX, cellCountZ;
+    private HexGridChunk[] chunks;
+    private GameObject[] cities;
 
-
-
-    void Awake() {
+    private void Awake()
+    {
         HexMetrics.noiseSource = noiseSource;
 
         cellCountX = chunkCountX * HexMetrics.chunkSizeX;
         cellCountZ = chunkCountZ * HexMetrics.chunkSizeZ;
-
-
 
         unitCount = 17;
         units = new List<Unit>();
@@ -63,27 +60,6 @@ public class HexGrid : MonoBehaviour {
             cell.render();
     }
 
-    void CreateChunks() {
-        chunks = new HexGridChunk[chunkCountX * chunkCountZ];
-
-        for (int z = 0, i = 0; z < chunkCountZ; z++) {
-            for (int x = 0; x < chunkCountX; x++) {
-                HexGridChunk chunk = chunks[i++] = Instantiate(chunkPrefab);
-                chunk.transform.SetParent(transform);
-            }
-        }
-    }
-
-    void CreateCells() {
-        cells = new List<HexCell>();
-
-        for (int z = 0, i = 0; z < cellCountZ; z++) {
-            for (int x = 0; x < cellCountX; x++) {
-                CreateCell(x, z, i++);
-            }
-        }
-    }
-
     public void CreateCells(HexCellContainer container)
     {
         cells = new List<HexCell>();
@@ -101,21 +77,26 @@ public class HexGrid : MonoBehaviour {
             HexCell cell = cells[j];
             HexCellData data = container.cells[j];
             cell.SetNeighborsFromData(data.neighbors);
-            
         }
     }
 
-    void OnEnable() {
-        HexMetrics.noiseSource = noiseSource;
-
-    }
-
-    void OnDisable()
+    public void DestroyCell(HexCell cell)
     {
-
+        Destroy(cell);
     }
 
-    public HexCell GetCell(Vector3 position) {
+    public void DestroyCells()
+    {
+        var cell = GameObject.FindGameObjectsWithTag("Cell");
+
+        foreach (var item in cell)
+        {
+            Destroy(item);
+        }
+    }
+
+    public HexCell GetCell(Vector3 position)
+    {
         position = transform.InverseTransformPoint(position);
         HexCoordinates coordinates = HexCoordinates.FromPosition(position);
         int index =
@@ -127,13 +108,16 @@ public class HexGrid : MonoBehaviour {
             return cells[cells.Count - 1];
     }
 
-    public HexCell GetCell(HexCoordinates coordinates) {
+    public HexCell GetCell(HexCoordinates coordinates)
+    {
         int z = coordinates.Z;
-        if (z < 0 || z >= cellCountZ) {
+        if (z < 0 || z >= cellCountZ)
+        {
             return null;
         }
         int x = coordinates.X + z / 2;
-        if (x < 0 || x >= cellCountX) {
+        if (x < 0 || x >= cellCountX)
+        {
             return null;
         }
         return cells[x + z * cellCountX];
@@ -148,13 +132,29 @@ public class HexGrid : MonoBehaviour {
         return units[index];
     }
 
-    public void ShowUI(bool visible) {
-        for (int i = 0; i < chunks.Length; i++) {
+    public void ShowUI(bool visible)
+    {
+        for (int i = 0; i < chunks.Length; i++)
+        {
             chunks[i].ShowUI(visible);
         }
     }
 
-    void CreateCell(int x, int z, int i) {
+    private void AddCellToChunk(int x, int z, HexCell cell)
+    {
+        Debug.Log("pre-chunk coords: " + x + ", " + z);
+        int chunkX = x / HexMetrics.chunkSizeX;
+        int chunkZ = z / HexMetrics.chunkSizeZ;
+        Debug.Log("chunk coords: " + chunkX + ", " + chunkZ);
+        HexGridChunk chunk = chunks[chunkX + chunkZ * chunkCountX];
+        int localX = x - chunkX * HexMetrics.chunkSizeX;
+        int localZ = z - chunkZ * HexMetrics.chunkSizeZ;
+        chunk.AddCell(cell);
+    }
+
+
+    private void CreateCell(int x, int z, int i)
+    {
         Vector3 position;
         position.x = (x + z * 0.5f - z / 2) * (HexMetrics.innerRadius * 2f);
         position.y = 0f;
@@ -181,7 +181,7 @@ public class HexGrid : MonoBehaviour {
         AddCellToChunk(x, z, cell);
     }
 
-    void CreateCell(HexCellData data, int i)
+    private void CreateCell(HexCellData data, int i)
     {
         Vector3 position;
         position.x = data.xpos;
@@ -196,6 +196,7 @@ public class HexGrid : MonoBehaviour {
         cell.data = data;
 
         Debug.Log("Cell #: " + data.cellNum);
+        Debug.Log("data coords: " + data.xpos + ", " + data.zpos);
         Text label = Instantiate<Text>(cellLabelPrefab);
         label.rectTransform.anchoredPosition =
             new Vector2(position.x, position.z);
@@ -207,48 +208,47 @@ public class HexGrid : MonoBehaviour {
         AddCellToChunk(data.xpos, data.zpos, cell);
     }
 
-    void AddCellToChunk(int x, int z, HexCell cell) {
-        int chunkX = x / HexMetrics.chunkSizeX;
-        int chunkZ = z / HexMetrics.chunkSizeZ;
-        Debug.Log(chunkX + ", " + chunkZ);
-        HexGridChunk chunk = chunks[chunkX + chunkZ * chunkCountX];
-        int localX = x - chunkX * HexMetrics.chunkSizeX;
-        int localZ = z - chunkZ * HexMetrics.chunkSizeZ;
-        chunk.AddCell(cell);
-    }
-
-    void SetNeighbors(HexCell cell, int x, int z, int i)
+    private void CreateCells()
     {
-        if (x > 0)
+        cells = new List<HexCell>();
+
+        for (int z = 0, i = 0; z < cellCountZ; z++)
         {
-            cell.SetNeighbor(HexDirection.W, cells[i - 1]);
-        }
-        if (z > 0)
-        {
-            if ((z & 1) == 0)
+            for (int x = 0; x < cellCountX; x++)
             {
-                cell.SetNeighbor(HexDirection.SE, cells[i - cellCountX]);
-                if (x > 0)
-                {
-                    cell.SetNeighbor(HexDirection.SW, cells[i - cellCountX - 1]);
-                }
-            }
-            else
-            {
-                cell.SetNeighbor(HexDirection.SW, cells[i - cellCountX]);
-                if (x < cellCountX - 1)
-                {
-                    cell.SetNeighbor(HexDirection.SE, cells[i - cellCountX + 1]);
-                }
+                CreateCell(x, z, i++);
             }
         }
     }
 
+    private void CreateChunks()
+    {
+        chunks = new HexGridChunk[chunkCountX * chunkCountZ];
 
-    void populateCellData(List<HexCell> cells, Color ocean, Color city, Color power, Color nuclear, Color airport, Color pipeline)
+        for (int z = 0, i = 0; z < chunkCountZ; z++)
+        {
+            for (int x = 0; x < chunkCountX; x++)
+            {
+                HexGridChunk chunk = chunks[i++] = Instantiate(chunkPrefab);
+                chunk.transform.SetParent(transform);
+            }
+        }
+    }
+    private void OnDisable()
+    {
+    }
+
+    private void OnEnable()
+    {
+        HexMetrics.noiseSource = noiseSource;
+    }
+    private void populateCellData(List<HexCell> cells, Color ocean, Color city, Color power, Color nuclear, Color airport, Color pipeline)
     {
         foreach (HexCell item in cells)
+        {
             item.Color = defaultColor;
+            item.Elevation = 1;
+        }
         for (int i = 0; i <= (cellCountX * cellCountZ) - 1; i = i + cellCountX) //colors base layer
         {
             //Debug.Log("Left Cell: " + (i));
@@ -256,10 +256,10 @@ public class HexGrid : MonoBehaviour {
 
             cells[i].Color = ocean;
             cells[i].type = "Ocean";
-            cells[i].Elevation = -1;
+            cells[i].Elevation = 0;
             cells[i + 1].Color = ocean;
             cells[i + 1].type = "Ocean";
-            cells[i + 1].Elevation = -1;
+            cells[i + 1].Elevation = 0;
             cells[i + (cellCountX - 3)].Color = breakaway;
             cells[i + (cellCountX - 3)].type = "Breakaway";
             cells[i + (cellCountX - 2)].Color = breakaway;
@@ -378,17 +378,30 @@ public class HexGrid : MonoBehaviour {
         cells[247].building = "pipeline";
     }
 
-    public void DestroyCell(HexCell cell)
+    private void SetNeighbors(HexCell cell, int x, int z, int i)
     {
-        Destroy(cell);
-    }
-    public void DestroyCells()
-    {
-        var cell = GameObject.FindGameObjectsWithTag("Cell");
-
-        foreach(var item in cell)
+        if (x > 0)
         {
-            Destroy(item);
+            cell.SetNeighbor(HexDirection.W, cells[i - 1]);
+        }
+        if (z > 0)
+        {
+            if ((z & 1) == 0)
+            {
+                cell.SetNeighbor(HexDirection.SE, cells[i - cellCountX]);
+                if (x > 0)
+                {
+                    cell.SetNeighbor(HexDirection.SW, cells[i - cellCountX - 1]);
+                }
+            }
+            else
+            {
+                cell.SetNeighbor(HexDirection.SW, cells[i - cellCountX]);
+                if (x < cellCountX - 1)
+                {
+                    cell.SetNeighbor(HexDirection.SE, cells[i - cellCountX + 1]);
+                }
+            }
         }
     }
 }

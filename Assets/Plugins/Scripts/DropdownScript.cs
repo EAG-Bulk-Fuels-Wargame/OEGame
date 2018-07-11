@@ -1,21 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class DropdownScript : MonoBehaviour {
-
+public class DropdownScript : MonoBehaviour
+{
     //Attach this script to a Dropdown GameObject
-    Dropdown m_Dropdown;
+    private Dropdown m_Dropdown;
+
     //This is the string that stores the current selection m_Text of the Dropdown
-    string m_Message;
+    private string m_Message;
+
     //This Text outputs the current selection to the screen
     public Text m_Text;
-    //This is the index value of the Dropdown
-    int m_DropdownValue;
-    bool initSet = false;
 
-    void Start()
+    //This is the index value of the Dropdown
+    private int m_DropdownValue;
+
+    private bool initSet = false;
+
+    private void Start()
     {
         //Fetch the DropDown component from the GameObject
         //m_Dropdown = GetComponent<Dropdown>()  ;
@@ -25,7 +27,7 @@ public class DropdownScript : MonoBehaviour {
         //Update();
     }
 
-    void Update()
+    private void Update()
     {
         //Keep the current index of the Dropdown in a variable
         //m_Dropdown = GameObject.FindWithTag("dropper").GetComponent<Dropdown>();
@@ -42,11 +44,11 @@ public class DropdownScript : MonoBehaviour {
         }
     }
 
-    public void WriteValue() {
+    public void WriteValue()
+    {
         Start();
         Update();
         GameObject.Find("PopUpSystem").SendMessage("Commit", m_Message);
-            //.GetScript().HexPopUp.Commit(m_Message);
+        //.GetScript().HexPopUp.Commit(m_Message);
     }
-
 }

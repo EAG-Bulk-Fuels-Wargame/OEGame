@@ -4,6 +4,12 @@
   <cellcounty>0</cellcounty>
   <HexCells>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -27,6 +33,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -50,6 +62,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -73,6 +91,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -96,6 +120,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -119,6 +149,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -142,6 +178,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -165,6 +207,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -188,6 +236,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -211,6 +265,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -234,6 +294,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -257,6 +323,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -280,6 +352,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -303,6 +381,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -326,6 +410,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -349,6 +439,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -372,6 +468,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -395,6 +497,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -418,6 +526,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -441,6 +555,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -464,6 +584,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -487,6 +613,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -510,6 +642,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -533,6 +671,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -556,6 +700,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -579,6 +729,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -602,6 +758,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -625,6 +787,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -648,6 +816,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -671,6 +845,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -694,6 +874,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -717,6 +903,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -740,6 +932,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -763,6 +961,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -786,6 +990,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -809,6 +1019,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -832,6 +1048,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -855,6 +1077,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -878,6 +1106,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="fuel" Name="South Fuel Depot">
+      <Color>
+        <r>0.9</r>
+        <g>0.65</g>
+        <b>0.7</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -901,6 +1135,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -924,6 +1164,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -947,6 +1193,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="city" Name="South City">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -970,6 +1222,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="city" Name="South City">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -993,6 +1251,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1016,6 +1280,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1039,6 +1309,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1062,6 +1338,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1085,6 +1367,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1108,6 +1396,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1131,6 +1425,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1154,6 +1454,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1177,6 +1483,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1200,6 +1512,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1223,6 +1541,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1246,6 +1570,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="airport" Name="South Airport">
+      <Color>
+        <r>0.1</r>
+        <g>0.9</g>
+        <b>0.9</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1269,6 +1599,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1292,6 +1628,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1315,6 +1657,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1338,6 +1686,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1361,6 +1715,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1384,6 +1744,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1407,6 +1773,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1430,6 +1802,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="city" Name="Hagers Town">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1453,6 +1831,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1476,6 +1860,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1499,6 +1889,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1522,6 +1918,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1545,6 +1947,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1568,6 +1976,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1591,6 +2005,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1614,6 +2034,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1637,6 +2063,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1660,6 +2092,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1683,6 +2121,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1706,6 +2150,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1729,6 +2179,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="power" Name="South Power Plant">
+      <Color>
+        <r>1</r>
+        <g>0.54</g>
+        <b>0</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1752,6 +2208,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1775,6 +2237,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1798,6 +2266,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1821,6 +2295,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1844,6 +2324,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1867,6 +2353,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1890,6 +2382,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1913,6 +2411,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1936,6 +2440,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1959,6 +2469,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="power" Name="Port Power Plant">
+      <Color>
+        <r>1</r>
+        <g>0.54</g>
+        <b>0</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -1982,6 +2498,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2005,6 +2527,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2028,6 +2556,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2051,6 +2585,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2074,6 +2614,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2097,6 +2643,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2120,6 +2672,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2143,6 +2701,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2166,6 +2730,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2189,6 +2759,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2212,6 +2788,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2235,6 +2817,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2258,6 +2846,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2281,6 +2875,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2304,6 +2904,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2327,6 +2933,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2350,6 +2962,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2373,6 +2991,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2396,6 +3020,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2419,6 +3049,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="city" Name="Midtown">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2442,6 +3078,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2465,6 +3107,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2488,6 +3136,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2511,6 +3165,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2534,6 +3194,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2557,6 +3223,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2580,6 +3252,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2603,6 +3281,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2626,6 +3310,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="city" Name="Port Town">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2649,6 +3339,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2672,6 +3368,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2695,6 +3397,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2718,6 +3426,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2741,6 +3455,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2764,6 +3484,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="city" Name="Midtown">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2787,6 +3513,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="fuel" Name="Midtown Fuel Depot">
+      <Color>
+        <r>0.9</r>
+        <g>0.65</g>
+        <b>0.7</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2810,6 +3542,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2833,6 +3571,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2856,6 +3600,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2879,6 +3629,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2902,6 +3658,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2925,6 +3687,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2948,6 +3716,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2971,6 +3745,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -2994,6 +3774,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="city" Name="Port Town">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3017,6 +3803,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3040,6 +3832,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3063,6 +3861,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3086,6 +3890,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3109,6 +3919,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3132,6 +3948,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3155,6 +3977,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3178,6 +4006,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3201,6 +4035,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3224,6 +4064,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3247,6 +4093,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3270,6 +4122,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="power" Name="Breakaway Power Plant">
+      <Color>
+        <r>1</r>
+        <g>0.54</g>
+        <b>0</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3293,6 +4151,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3316,6 +4180,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3339,6 +4209,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3362,6 +4238,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3385,6 +4267,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3408,6 +4296,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3431,6 +4325,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3454,6 +4354,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3477,6 +4383,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3500,6 +4412,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="nuclear" Name="Capital Nuclear Plant">
+      <Color>
+        <r>0.9</r>
+        <g>0.9</g>
+        <b>0</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3523,6 +4441,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3546,6 +4470,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3569,6 +4499,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3592,6 +4528,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3615,6 +4557,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="city" Name="Fate City">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3638,6 +4586,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="city" Name="Fate City">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3661,6 +4615,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3684,6 +4644,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3707,6 +4673,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3730,6 +4702,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3753,6 +4731,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3776,6 +4760,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3799,6 +4789,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3822,6 +4818,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3845,6 +4847,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3868,6 +4876,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3891,6 +4905,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3914,6 +4934,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3937,6 +4963,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3960,6 +4992,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -3983,6 +5021,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4006,6 +5050,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4029,6 +5079,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4052,6 +5108,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4075,6 +5137,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4098,6 +5166,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4121,6 +5195,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4144,6 +5224,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4167,6 +5253,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4190,6 +5282,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4213,6 +5311,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="fuel" Name="Capital Fuel Depot">
+      <Color>
+        <r>0.9</r>
+        <g>0.65</g>
+        <b>0.7</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4236,6 +5340,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="city" Name="Capital City">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4259,6 +5369,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4282,6 +5398,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4305,6 +5427,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4328,6 +5456,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4351,6 +5485,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4374,6 +5514,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4397,6 +5543,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4420,6 +5572,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4443,6 +5601,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4466,6 +5630,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4489,6 +5659,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4512,6 +5688,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4535,6 +5717,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4558,6 +5746,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="airport" Name="Capital Airport">
+      <Color>
+        <r>0.1</r>
+        <g>0.9</g>
+        <b>0.9</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4581,6 +5775,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4604,6 +5804,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="city" Name="Capital City">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4627,6 +5833,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="city" Name="Capital City">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4650,6 +5862,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4673,6 +5891,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4696,6 +5920,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4719,6 +5949,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4742,6 +5978,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4765,6 +6007,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4788,6 +6036,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4811,6 +6065,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4834,6 +6094,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4857,6 +6123,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4880,6 +6152,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4903,6 +6181,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4926,6 +6210,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4949,6 +6239,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4972,6 +6268,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -4995,6 +6297,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5018,6 +6326,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5041,6 +6355,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5064,6 +6384,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5087,6 +6413,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="city" Name="Charlie City">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5110,6 +6442,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5133,6 +6471,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5156,6 +6500,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5179,6 +6529,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5202,6 +6558,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5225,6 +6587,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5248,6 +6616,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5271,6 +6645,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5294,6 +6674,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5317,6 +6703,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5340,6 +6732,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5363,6 +6761,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5386,6 +6790,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5409,6 +6819,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5432,6 +6848,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5455,6 +6877,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5478,6 +6906,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="city" Name="Charlie City">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5501,6 +6935,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5524,6 +6964,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5547,6 +6993,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5570,6 +7022,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5593,6 +7051,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5616,6 +7080,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="fuel" Name="North Fuel Depot">
+      <Color>
+        <r>0.9</r>
+        <g>0.65</g>
+        <b>0.7</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5639,6 +7109,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="power" Name="North Renewable Plant">
+      <Color>
+        <r>1</r>
+        <g>0.54</g>
+        <b>0</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5662,6 +7138,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5685,6 +7167,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="pipeline" Name="Pipeline Station">
+      <Color>
+        <r>0.3</r>
+        <g>0.3</g>
+        <b>1</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5708,6 +7196,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5731,6 +7225,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5754,6 +7254,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5777,6 +7283,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5800,6 +7312,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5823,6 +7341,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5846,6 +7370,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5869,6 +7399,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5892,6 +7428,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5915,6 +7457,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5938,6 +7486,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5961,6 +7515,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -5984,6 +7544,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="city" Name="North City">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6007,6 +7573,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="city" Name="North City">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6030,6 +7602,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6053,6 +7631,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6076,6 +7660,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6099,6 +7689,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6122,6 +7718,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="city" Name="Beta Town">
+      <Color>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6145,6 +7747,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6168,6 +7776,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6191,6 +7805,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6214,6 +7834,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6237,6 +7863,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6260,6 +7892,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6283,6 +7921,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Ocean" Building="" Name="">
+      <Color>
+        <r>0.84</r>
+        <g>0.84</g>
+        <b>0.8</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6306,6 +7950,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6329,6 +7979,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6352,6 +8008,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6375,6 +8037,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6398,6 +8066,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6421,6 +8095,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6444,6 +8124,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6467,6 +8153,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6490,6 +8182,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6513,6 +8211,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6536,6 +8240,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="" Building="" Name="">
+      <Color>
+        <r>0.61</r>
+        <g>0.7</g>
+        <b>0.5</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6559,6 +8269,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6582,6 +8298,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>
@@ -6605,6 +8327,12 @@
       </neighbors>
     </HexCell>
     <HexCell Type="Breakaway" Building="" Name="">
+      <Color>
+        <r>1</r>
+        <g>0.6</g>
+        <b>0.6</b>
+        <a>1</a>
+      </Color>
       <Roads>false</Roads>
       <Roads>false</Roads>
       <Roads>false</Roads>

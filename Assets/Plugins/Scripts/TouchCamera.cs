@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class TouchCamera : MonoBehaviour
 {
-
     private static readonly float PanSpeed = 120f;
     private static readonly float ZoomSpeedTouch = 5f;
     private static readonly float ZoomSpeedMouse = 1f;
@@ -20,12 +18,12 @@ public class TouchCamera : MonoBehaviour
     private bool wasZoomingLastFrame; // Touch mode only
     private Vector2[] lastZoomPositions; // Touch mode only
 
-    void Awake()
+    private void Awake()
     {
         cam = GetComponent<Camera>();
     }
 
-    void Update()
+    private void Update()
     {
         if (Input.touchSupported && Application.platform != RuntimePlatform.WebGLPlayer)
         {
@@ -37,11 +35,10 @@ public class TouchCamera : MonoBehaviour
         }
     }
 
-    void HandleTouch()
+    private void HandleTouch()
     {
         switch (Input.touchCount)
         {
-
             case 1: // Panning
                 wasZoomingLastFrame = false;
 
@@ -68,7 +65,7 @@ public class TouchCamera : MonoBehaviour
                 }
                 else
                 {
-                    // Zoom based on the distance between the new positions compared to the 
+                    // Zoom based on the distance between the new positions compared to the
                     // distance between the previous positions.
                     float newDistance = Vector2.Distance(newPositions[0], newPositions[1]);
                     float oldDistance = Vector2.Distance(lastZoomPositions[0], lastZoomPositions[1]);
@@ -86,7 +83,7 @@ public class TouchCamera : MonoBehaviour
         }
     }
 
-    void HandleMouse()
+    private void HandleMouse()
     {
         // On mouse down, capture it's position.
         // Otherwise, if the mouse is still down, pan the camera.
@@ -104,7 +101,7 @@ public class TouchCamera : MonoBehaviour
         ZoomCamera(scroll, ZoomSpeedMouse);
     }
 
-    void PanCamera(Vector3 newPanPosition)
+    private void PanCamera(Vector3 newPanPosition)
     {
         // Determine how much to move the camera
         Vector3 offset = cam.ScreenToViewportPoint(lastPanPosition - newPanPosition);
@@ -123,7 +120,7 @@ public class TouchCamera : MonoBehaviour
         lastPanPosition = newPanPosition;
     }
 
-    void ZoomCamera(float offset, float speed)
+    private void ZoomCamera(float offset, float speed)
     {
         if (offset == 0)
         {
@@ -131,6 +128,5 @@ public class TouchCamera : MonoBehaviour
         }
 
         cam.fieldOfView = Mathf.Clamp(cam.fieldOfView - (offset * speed), ZoomBounds[0], ZoomBounds[1]);
-
     }
 }

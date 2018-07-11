@@ -12,6 +12,7 @@ public class HexCell:MonoBehaviour{
     public string type;
     public string building;
     public string name;
+    public string fuelRegion;
     public bool hasUnit = false;
     public HexGrid hexGrid;
     public GameObject Airport;
@@ -21,7 +22,15 @@ public class HexCell:MonoBehaviour{
     public GameObject Oil;
     public HexGridChunk chunk;
     public int cellNum;
-    
+    public Color cDefault;
+    public Color cBreakaway ;
+    public Color cOcean;
+    public Color cCity;
+    public Color cPower;
+    public Color cNuclear;
+    public Color cOil;
+    public Color cAirport;
+
     int[] neighborNum = new int[6];
 
     public void render() //Places buildings on cells of proper type
@@ -86,11 +95,59 @@ public class HexCell:MonoBehaviour{
         }
     }
 
+    //replace ReturnToDefaultColor with this
+    public void ResetColor()
+    {
+        HexMapEditor heme = GameObject.FindObjectOfType<HexMapEditor>();
+        switch (building)
+        {
+            case "city":
+                color = cCity;
+                break;
+            case "power":
+                color = cPower;
+                break;
+            case "nuclear":
+                color = cNuclear;
+                break;
+            case "fuel":
+                color = cOil;
+                break;
+            case "airport":
+                color = cAirport;
+                break;
+            case "":
+                switch (type)
+                {
+                    case "Breakaway":
+                        color = cBreakaway;
+                        break;
+                    case "Ocean":
+                        color = cOcean;
+                        break;
+                    case "":
+                        color = cDefault;     
+                        break;
+                }
+                break;
+        }
+        Refresh();
+    }
+
     private void Awake() 
     {
         //Fills the neighborNum list with garbage that can be filtered out later
         for (int i = 0; i < 6; i++)
             neighborNum[i] = int.MaxValue;
+        //Adds colors
+        ColorUtility.TryParseHtmlString("#9CB280", out cDefault);
+        ColorUtility.TryParseHtmlString("#FF9999", out cBreakaway);
+        ColorUtility.TryParseHtmlString("#D6D6CC", out cOcean);
+        ColorUtility.TryParseHtmlString("#808080", out cCity);
+        ColorUtility.TryParseHtmlString("#FF8A00", out cPower);
+        ColorUtility.TryParseHtmlString("#FFFF00", out cNuclear);
+        ColorUtility.TryParseHtmlString("#FFBFCC", out cOil);
+        ColorUtility.TryParseHtmlString("#33FFFF", out cAirport);
     }
 
     private void Update()
@@ -254,13 +311,12 @@ public class HexCell:MonoBehaviour{
 	bool hasIncomingRiver, hasOutgoingRiver;
 	HexDirection incomingRiver, outgoingRiver;
 	
-    
 	[SerializeField]
 	bool[] roads;
     public HexCell[] neighbors;
 
     public HexCell GetNeighbor (HexDirection direction) { //Returns neighboring cell at direction
-        Debug.Log("direction at get: "+(int)direction);
+        //Debug.Log("direction at get: "+(int)direction);
 		return neighbors[(int)direction];
 	}
 
@@ -443,6 +499,7 @@ public class HexCell:MonoBehaviour{
         data.z = transform.position.z;
         data.cellNum = cellNum;
         data.neighbors = neighborNum;
+        data.color = Color;
     }
 
     public void LoadData()
@@ -453,6 +510,7 @@ public class HexCell:MonoBehaviour{
         roads = data.roads;
         coordinates = HexCoordinates.FromOffsetCoordinates(data.xpos, data.zpos);
         cellNum = data.cellNum;
+        Color = data.color;
         Vector3 pos;
         pos.x = data.x;
         pos.y = data.y;
@@ -463,18 +521,80 @@ public class HexCell:MonoBehaviour{
 
     public void OnEnable()
     {
-        SaveData.OnLoaded += delegate { LoadData(); };
-        SaveData.OnBeforeSave += delegate { StoreData(); };
-        SaveData.OnBeforeSave += delegate { SaveData.AddCellData(data); };
+        Debug.Log("enabled cell " + cellNum);
+        SaveData.OnBeforeLoaded += delegate {
+            Destroy(this, 0);
+            Debug.Log("Should destroy here");
+        };
+        SaveData.OnLoaded += delegate {
+            if(this != null)
+                LoadData();
+        };
+        SaveData.OnBeforeSave += delegate {
+            HexCellData data = new HexCellData();
+        };
+        SaveData.OnBeforeSave += delegate {
+            if (this != null)
+            {
+                //Debug.Log("Storing cell data...");
+                //StoreData();
+            }
+        };
+        SaveData.OnBeforeSave += delegate {
+            if (this != null)
+            {
+                Debug.Log("Storing cell data...");
+                Debug.Log("Coords: " + coordinates.X + ", " + coordinates.Y + ", " + coordinates.Z + ", ");
+                StoreData();
+
+                if (!SaveData.cellNumList.Contains(cellNum))
+                {
+                    Debug.Log("haha I'm adding data, my name is cell #" + cellNum);
+                    Debug.Log("the cellnum list is now " + SaveData.cellNumList.Count + " cells long");
+                    SaveData.cellNumList.Add(cellNum);
+                    SaveData.AddCellData(data);
+                }
+            }
+        };
     }
 
     public void OnDisable()
     {
-        SaveData.OnLoaded += delegate { LoadData(); };
-        SaveData.OnBeforeSave += delegate { StoreData(); };
-        SaveData.OnBeforeSave += delegate { SaveData.AddCellData(data); };
+        Debug.Log("disabled cell " +cellNum);
+        SaveData.OnBeforeLoaded += delegate { Destroy(this, 0); };
+        SaveData.OnLoaded += delegate {
+            if (this != null)
+                LoadData();
+        };
+        SaveData.OnBeforeSave += delegate {
+            HexCellData data = new HexCellData();
+        };
+        SaveData.OnBeforeSave += delegate {
+            if (this != null)
+            {
+                //Debug.Log("Storing cell data...");
+                //StoreData();
+            }
+        };
+        SaveData.OnBeforeSave += delegate {
+            if (this != null)
+            {
+                Debug.Log("Storing cell data...");
+                StoreData();
+
+                if (!SaveData.cellNumList.Contains(cellNum))
+                {
+                    Debug.Log("haha I'm adding data, my name is cell #" + cellNum);
+                    Debug.Log("the cellnum list is now " + SaveData.cellNumList.Count + " cells long");
+                    SaveData.cellNumList.Add(cellNum);
+                    SaveData.AddCellData(data);
+                }
+            }
+        };
+        
     }
 }
+
 public class HexCellData
 {
     [XmlAttribute("Type")]
@@ -483,6 +603,8 @@ public class HexCellData
     public string building;
     [XmlAttribute("Name")]
     public string name;
+    [XmlElement("Color")]
+    public Color color;
     [XmlElement("Roads")]
     public bool[] roads;
     [XmlElement("xpos")]
@@ -504,7 +626,7 @@ public class HexCellData
 }
 
 [XmlRoot("HexCellCollection")]
-public class HexCellContainer
+public class HexCellContainer 
 {
     [XmlElement("cellcountx")]
     public int cellcountx;
@@ -513,4 +635,7 @@ public class HexCellContainer
     [XmlArray("HexCells")]
     [XmlArrayItem("HexCell")]
     public List<HexCellData> cells = new List<HexCellData>();
+
+   
 }
+ 

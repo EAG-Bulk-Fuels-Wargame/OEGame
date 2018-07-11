@@ -13,6 +13,11 @@ TagManager:
   - infoui
   - AndroidDebugText
   - Cell
+  - FREditText
+  - CNEditText
+  - InputBox
+  - PopUpUI
+  - BG
   layers:
   - Default
   - TransparentFX

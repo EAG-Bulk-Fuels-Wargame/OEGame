@@ -11,6 +11,7 @@ public class HexPopUp : MonoBehaviour
     Image popUpBox;
     string dropdownVal = "";
     string scenarioName = "";
+    GameObject fullPopUp;
 
     //Used when user selects an option on the action toolbar dropdown list
     public void Commit(string s)
@@ -22,8 +23,15 @@ public class HexPopUp : MonoBehaviour
     //Gets rid of the toolbar and sends the user's choice to the ActionProcess script
     public void Submit()
     {
-        Destroy(GameObject.FindWithTag("actionPopUpBox"));
+        //GameObject h = GameObject.FindWithTag("actionPopUpBox");
+        //h.tag = "junk_tag";
+        //Debug.Log(h.tag);
+        Destroy(fullPopUp);
+        //Object.Destroy(GameObject.FindWithTag("actionPopUpBox"));
         ActionProcess.runAction(scenarioName, dropdownVal);
+        //Destroy(GameObject.FindWithTag("actionPopUpBox"));
+        //GameObject.FindWithTag("actionPopUpBox").SetActiveRecursively(false);
+
     }
 
     void Update()
@@ -32,15 +40,18 @@ public class HexPopUp : MonoBehaviour
     }
 
     //Creates the action toolbar popup
-    public void CreatePopup(Vector2 loc, List<string> s, string scenario) {
-        Instantiate(ActionPopUpPrefab);
-        popUpBox = GameObject.FindWithTag("actionPopUpBox").GetComponent<Image>();
+    public void CreatePopup(Vector2 loc, List<string> s, string scenario)
+    {
+        fullPopUp = Instantiate(ActionPopUpPrefab) as GameObject;
+        popUpBox = fullPopUp.GetComponentInChildren<Image>();
+        //popUpBox = a.GetComponent<Image>();
+        //popUpBox = GameObject.FindWithTag("actionPopUpBox").GetComponent<Image>();
         scenarioName = scenario;
         popUpBox.GetComponent<RectTransform>().anchoredPosition = loc;
-        Dropdown m_Dropdown= GameObject.FindWithTag("dropper").GetComponent<Dropdown>();
+        Dropdown m_Dropdown = GameObject.FindWithTag("dropper").GetComponent<Dropdown>();
         m_Dropdown.ClearOptions();
         m_Dropdown.AddOptions(s);
     }
 
-} 
+}
 

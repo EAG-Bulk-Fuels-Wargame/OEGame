@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class CamController : MonoBehaviour
 {
-
     public float verticalScrollArea = 10f;
     public float horizontalScrollArea = 10f;
     public float verticalScrollSpeed = 10f;
@@ -22,6 +20,7 @@ public class CamController : MonoBehaviour
             MoveEnabled = false;
         }
     }
+
     public bool ZoomEnabled = true;
     public bool MoveEnabled = true;
 
@@ -33,13 +32,12 @@ public class CamController : MonoBehaviour
     private int _xAngle;
 
     // Use this for initialization
-    void Start()
+    private void Start()
     {
-
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         _mousePos = Input.mousePosition;
 
@@ -49,7 +47,6 @@ public class CamController : MonoBehaviour
             if (_mousePos.x < horizontalScrollArea) { _xMove = -1; }
             else if (_mousePos.x >= Screen.width - horizontalScrollArea) { _xMove = 1; }
             else { _xMove = 0; }
-
 
             if (_mousePos.y < verticalScrollArea) { _zMove = -1; }
             else if (_mousePos.y >= Screen.height - verticalScrollArea) { _zMove = 1; }
@@ -92,6 +89,5 @@ public class CamController : MonoBehaviour
         _moveVector = (new Vector3(x * horizontalScrollSpeed, y * verticalScrollSpeed, z * horizontalScrollSpeed) * Time.deltaTime);
         transform.Translate(_moveVector, Space.World);
         transform.Rotate(Vector3.right * xang);
-
     }
 }
