@@ -13,6 +13,7 @@ public class HexCell:MonoBehaviour{
     public string building;
     public string name;
     public string fuelRegion;
+    private bool bbreakaway;
     public bool hasUnit = false;
     public HexGrid hexGrid;
     public GameObject Airport;
@@ -23,7 +24,7 @@ public class HexCell:MonoBehaviour{
     public HexGridChunk chunk;
     public int cellNum;
     public Color cDefault;
-    public Color cBreakaway ;
+    public Color cBreakaway;
     public Color cOcean;
     public Color cCity;
     public Color cPower;
@@ -37,17 +38,21 @@ public class HexCell:MonoBehaviour{
     {
         if (building == "city")
         {
+           
             Vector3 pos;
             pos.x = transform.position.x;
             pos.y = transform.position.y;
             pos.z = transform.position.z - 10;
-
+            /*
             //Debug.Log(pos.x + "," + pos.y + "," + pos.z);
 
             GameObject cityInstance = Instantiate(City) as GameObject;
             cityInstance.transform.localPosition = pos;
             cityInstance.transform.SetParent(transform);
             pos.z = transform.position.z;
+            */
+            City city = new City("name", 32, 0 , 1, pos);
+
         }
         else if (building == "airport")
         {
@@ -95,6 +100,18 @@ public class HexCell:MonoBehaviour{
         }
     }
 
+    public bool GetCity()
+    {
+        if(building == "city")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     //replace ReturnToDefaultColor with this
     public void ResetColor()
     {
@@ -121,6 +138,7 @@ public class HexCell:MonoBehaviour{
                 {
                     case "Breakaway":
                         color = cBreakaway;
+                        bbreakaway = true;
                         break;
                     case "Ocean":
                         color = cOcean;
@@ -132,6 +150,12 @@ public class HexCell:MonoBehaviour{
                 break;
         }
         Refresh();
+    }
+
+    public bool getBrakeaway()
+    {
+        return bbreakaway;
+
     }
 
     private void Awake() 
@@ -458,6 +482,147 @@ public class HexCell:MonoBehaviour{
 		chunk.Refresh();
 	}
 
+    public List<HexCell> GetRadiusOfCells(HexCell hex, int rad)
+    {
+        List<HexCell> tileArea = new List<HexCell>();
+        HexCell secondaryTile = hex;
+        HexDirection secDir = HexDirection.E;
+        HexDirection[] eastDirPath = new HexDirection[] { HexDirection.SW, HexDirection.W, HexDirection.NW, HexDirection.NE, HexDirection.E, HexDirection.SE };
+        HexDirection[] eastRevDirPath = new HexDirection[] { HexDirection.NW, HexDirection.W, HexDirection.SW, HexDirection.SE, HexDirection.E, HexDirection.NE };
+        HexDirection[] westDirPath = new HexDirection[] { HexDirection.NE, HexDirection.E, HexDirection.SE, HexDirection.SW, HexDirection.W, HexDirection.NW };
+        HexDirection[] westRevDirPath = new HexDirection[] { HexDirection.SE, HexDirection.E, HexDirection.NE, HexDirection.NW, HexDirection.W, HexDirection.SW };
+        HexDirection[] forwardPath;
+        HexDirection[] reversePath;
+        for (int i = 0; i < rad + 1; i++)
+        {
+            if (secondaryTile != null)
+            {
+                secondaryTile = secondaryTile.GetNeighbor(HexDirection.E);
+            }
+            else
+            {
+                secDir = HexDirection.W;
+            }
+        }
+        if (secDir == HexDirection.E)
+        {
+            forwardPath = eastDirPath;
+            reversePath = eastRevDirPath;
+        }
+        else
+        {
+            forwardPath = westDirPath;
+            reversePath = westRevDirPath;
+        }
+        tileArea.Add(hex);
+        HexCell startTile = hex;
+        for (int i = 0; i < rad; i++)
+        {
+            startTile = startTile.GetNeighbor(secDir);
+            HexCell tile = startTile;
+            bool rev = false;
+            foreach (HexDirection direx in forwardPath)
+            {
+                for (int j = 0; j < i + 1; j++)
+                {
+                    if (tile != null && tile.GetNeighbor(direx) != null && !rev)
+                    {
+                        tile = tile.GetNeighbor(direx);
+                        tileArea.Add(tile);
+                    }
+                    else
+                    {
+                        rev = true;
+                    }
+                }
+            }
+            if (rev)
+            {
+                tileArea.Add(startTile);
+                tile = startTile;
+                bool finished = false;
+                foreach (HexDirection direx in reversePath)
+                {
+                    for (int j = 0; j < i + 1; j++)
+                    {
+                        if (tile != null && tile.GetNeighbor(direx) != null && !finished)
+                        {
+                            tile = tile.GetNeighbor(direx);
+                            tileArea.Add(tile);
+                        }
+                        else
+                        {
+                            finished = true;
+                        }
+                    }
+                }
+            }
+        }
+        return tileArea;
+    }
+
+    public int GetHexDistance(HexCell baseCell, HexCell distancedCell)
+    {
+        HexDirection[] cardinals = new HexDirection[] { HexDirection.E, HexDirection.NE, HexDirection.NW, HexDirection.SE, HexDirection.SW, HexDirection.W };
+        List<HexCell> radList = new List<HexCell>();
+        List<HexCell> addList = new List<HexCell>();
+        int dist = 1;
+        radList.Add(baseCell);
+        if (baseCell == distancedCell)
+            return 0;
+        bool notExceeded = true;
+        while (notExceeded)
+        {
+            foreach (HexCell hex in radList)
+                foreach (HexDirection dir in cardinals)
+                {
+                    if (hex.GetNeighbor(dir) != null)
+                        addList.Add(hex.GetNeighbor(dir));
+                }
+            foreach (HexCell hex in addList)
+            {
+                if (hex == distancedCell)
+                    return dist;
+            }
+            for (int i = 0; i < radList.Count; i++)
+            {
+                for (int j = 0; j < addList.Count; j++)
+                {
+                    if (radList[i] == addList[j])
+                    {
+                        addList.RemoveAt(j);
+                        j--;
+                    }
+                }
+            }
+            for (int i = 0; i < addList.Count; i++)
+            {
+                for (int j = 0; j < addList.Count; j++)
+                {
+                    if (i != j)
+                    {
+                        if (addList[i] == addList[j])
+                        {
+                            addList.RemoveAt(j);
+                            j--;
+                        }
+                    }
+                }
+            }
+            radList.Clear();
+            foreach (HexCell hex in addList)
+                radList.Add(hex);
+            addList.Clear();
+            dist++;
+            if (radList.Count == 0)
+            {
+                notExceeded = false;
+            }
+        }
+        return -1;
+    }
+
+
     public int WaterLevel
     {
         get
@@ -624,6 +789,8 @@ public class HexCellData
     [XmlArray("neighbors")]
     public int[] neighbors;
 }
+
+
 
 [XmlRoot("HexCellCollection")]
 public class HexCellContainer 

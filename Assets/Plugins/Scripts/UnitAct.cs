@@ -66,16 +66,17 @@ public static class UnitAct
         string newUnitModelPrefab;
         string newUnitName;
         int newHealth;
-        int newStrength;
+        float newEffectiveness;
         int newStack;
         bool newTerry;
         newUnitModelPrefab = u1.GetUnitModelPrefab();
         newUnitName = u1.GetUnitName();
-        newHealth = u1.GetHealth() + u2.GetHealth();
-        newStrength = u1.GetStrength() + u2.GetStrength();
+        // newHealth = u1.GetHealth() + u2.GetHealth();
+        //  newStrength = u1.GetStrength() + u2.GetStrength();
+        newEffectiveness = u1.GetEffective() + u2.GetEffective();
         newStack = u1.GetStacked() + u2.GetStacked();
         newTerry = u1.GetTerrorist();
-        Unit finalUnit = new Unit(newUnitModelPrefab, u1.GetUnitCell(), newUnitName, newHealth, newStrength, newStack, u1.GetTeam(), newTerry);
+        Unit finalUnit = new Unit(newUnitModelPrefab, u1.GetUnitCell(), newUnitName, newEffectiveness, newStack, u1.GetTeam(), newTerry);
         RemoveUnit(u1);
         RemoveUnit(u2);
         AddUnit(finalUnit);
@@ -84,6 +85,7 @@ public static class UnitAct
 
     public static void MoveUnit(Unit u)
     {
+        
 
     }
 
