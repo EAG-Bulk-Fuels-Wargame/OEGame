@@ -9,7 +9,7 @@ public class Unit : MonoBehaviour
     string unitModelPrefab;
     //public GameObject unitModelPrefabObject;
     GameObject unitModel;
-    
+
     HexCell occupiedCell;
     public string unitName;
     private float effectiveness;
@@ -32,8 +32,8 @@ public class Unit : MonoBehaviour
         unitModelPrefab = "Temp Soldier";//give it the name of a model in the "Resources" folder
         occupiedCell = hex;
         unitName = "infantry";
-       // health = 10;
-      //  strength = 10;
+        // health = 10;
+        //  strength = 10;
         unitModel = CreateUnit(occupiedCell);
         stackedUnits = 1;
         team = t;
@@ -49,7 +49,7 @@ public class Unit : MonoBehaviour
             visibility = true;
 
         }
-        else if(team == "Insurgents" && hex.getBrakeaway() == true )
+        else if (team == "Insurgents" && hex.getBrakeaway() == true)
         {
 
             visibility = false;
@@ -60,7 +60,7 @@ public class Unit : MonoBehaviour
             visibility = true;
 
         }
-        
+
 
     }
 
@@ -73,8 +73,8 @@ public class Unit : MonoBehaviour
         unitModelPrefab = ump;
         occupiedCell = hex;
         unitName = name;
-       // health = h;
-       // strength = str;
+        // health = h;
+        // strength = str;
         unitModel = CreateUnit(occupiedCell);
         terrorist = terry;
         stackedUnits = stk;
@@ -88,7 +88,7 @@ public class Unit : MonoBehaviour
         {
             effectiveness = 100;
         }
-        else if(e<=0)
+        else if (e <= 0)
         {
             effectiveness = 1;
         }
@@ -103,7 +103,7 @@ public class Unit : MonoBehaviour
             visibility = true;
 
         }
-        else if (team == "Insurgents" && hex.getBrakeaway() == true)
+        else if (team == "Insurgents" && hex.getBrakeaway() == false)
         {
 
             visibility = false;
@@ -144,14 +144,13 @@ public class Unit : MonoBehaviour
         pos.x = h.transform.position.x;
         pos.y = h.transform.position.y;
         pos.z = h.transform.position.z;
-        Height = (int) pos.y;
+        Height = (int)pos.y;
         GameObject unit = Instantiate(Resources.Load(unitModelPrefab)) as GameObject;
         //GameObject unit = Instantiate(unitModelPrefabObject) as GameObject;
         unit.transform.localPosition = pos;
         return unit;
-
     }
-
+   
     public void ChangeTile(HexCell hex)
     {
         Vector3 pos;
@@ -427,15 +426,15 @@ public class Unit : MonoBehaviour
         }
         else if (option == 8)
         {
-            this.SetFuelCT(this.GetFuelCT() + 10000);
+            SetFuelCT(GetFuelCT() + 10000);
             //Public Works Project
             //reduce unrest when unrest is implemented in the U.I.
         }
         else if (option == 9)
         {
             //Allocate Fuel to Unit
-            fuelCT = this.GetFuelCT() + 10000;
-            fuelM = this.GetFuelM() + 1;
+            fuelCT = GetFuelCT() + 10000;
+            fuelM = GetFuelM() + 1;
         }
         else if (option == 10)
         {

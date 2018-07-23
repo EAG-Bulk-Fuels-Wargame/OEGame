@@ -32,6 +32,10 @@ public class HexGrid : MonoBehaviour
     private int cellCountX, cellCountZ;
     private HexGridChunk[] chunks;
     private GameObject[] cities;
+    private List<City> Cities;
+    private City xity;
+
+
 
     private void Awake()
     {
@@ -58,6 +62,13 @@ public class HexGrid : MonoBehaviour
         populateCellData(cells, ocean, city, power, nuclear, airport, pipeline);
         foreach (HexCell cell in cells)
             cell.render();
+    }
+
+    public void AddCities(City city)
+    {
+
+        Cities.Add(city);
+
     }
 
     public void CreateCells(HexCellContainer container)
@@ -142,10 +153,10 @@ public class HexGrid : MonoBehaviour
 
     private void AddCellToChunk(int x, int z, HexCell cell)
     {
-        Debug.Log("pre-chunk coords: " + x + ", " + z);
+        //      Debug.Log("pre-chunk coords: " + x + ", " + z);
         int chunkX = x / HexMetrics.chunkSizeX;
         int chunkZ = z / HexMetrics.chunkSizeZ;
-        Debug.Log("chunk coords: " + chunkX + ", " + chunkZ);
+        //    Debug.Log("chunk coords: " + chunkX + ", " + chunkZ);
         HexGridChunk chunk = chunks[chunkX + chunkZ * chunkCountX];
         int localX = x - chunkX * HexMetrics.chunkSizeX;
         int localZ = z - chunkZ * HexMetrics.chunkSizeZ;
@@ -160,7 +171,7 @@ public class HexGrid : MonoBehaviour
         position.y = 0f;
         position.z = z * (HexMetrics.outerRadius * 1.5f);
 
-        Debug.Log("ival" + i);
+        //    Debug.Log("ival" + i);
         HexCell cell = Instantiate<HexCell>(cellPrefab);
         cells.Add(cell);
         cell.transform.localPosition = position;
@@ -234,8 +245,10 @@ public class HexGrid : MonoBehaviour
             }
         }
     }
+
     private void OnDisable()
     {
+
     }
 
     private void OnEnable()
@@ -267,6 +280,8 @@ public class HexGrid : MonoBehaviour
             cells[i + (cellCountX - 1)].Color = breakaway;
             cells[i + (cellCountX - 1)].type = "Breakaway";
         }
+
+        Cities = new List<City>();
 
         cells[41].Color = city;
         cells[41].name = "South City";
@@ -376,6 +391,58 @@ public class HexGrid : MonoBehaviour
         cells[247].Color = pipeline;
         cells[247].name = "Pipeline Station";
         cells[247].building = "pipeline";
+
+        foreach (HexCell cell in cells)
+        {
+
+            if (cell.building == "city")
+            {
+                //
+                xity = new City(cell.name, 32, 0, 1, cell);
+                Cities.Add(xity);
+                //   Debug.Log("inside"); 
+                //Debug.Log(Cities.Count);
+            }
+
+
+            //Debug.Log(Cities.Count);
+
+        }
+        //  int bleh = Cities.Count;
+
+        for (int i = 0; i < Cities.Count; i++)
+        {
+
+
+            for (int x = 0; x < Cities.Count; x++)
+            {
+                if (Cities[i].GetName() == Cities[x].GetName())
+                {
+                    Cities[i].CityMerge(Cities[x]);
+                    Cities.RemoveAt(x);
+                    //  x--;
+                    // bleh--;
+
+                }
+
+            }
+
+        }
+
+        for (int i = 0; i < Cities.Count; i++)
+        {
+            Debug.Log(Cities[i].GetName());
+        }
+
+
+        // Debug.Log(Cities[0].GetName());
+        Debug.Log(Cities.Count);
+    }
+
+    public void AddCity(City city)
+    {
+        Cities.Add(city);
+
     }
 
     private void SetNeighbors(HexCell cell, int x, int z, int i)

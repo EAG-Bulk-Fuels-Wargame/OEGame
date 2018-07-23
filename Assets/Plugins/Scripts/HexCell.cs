@@ -31,11 +31,13 @@ public class HexCell:MonoBehaviour{
     public Color cNuclear;
     public Color cOil;
     public Color cAirport;
+    //private List<City> Cities;
 
     int[] neighborNum = new int[6];
 
     public void render() //Places buildings on cells of proper type
     {
+        List<City> Cities = new List<City>();
         if (building == "city")
         {
            
@@ -43,16 +45,17 @@ public class HexCell:MonoBehaviour{
             pos.x = transform.position.x;
             pos.y = transform.position.y;
             pos.z = transform.position.z - 10;
-            /*
+            
             //Debug.Log(pos.x + "," + pos.y + "," + pos.z);
 
             GameObject cityInstance = Instantiate(City) as GameObject;
             cityInstance.transform.localPosition = pos;
             cityInstance.transform.SetParent(transform);
             pos.z = transform.position.z;
-            */
-            City city = new City("name", 32, 0 , 1, pos);
-
+            City xity = new City(name,10,0,3,this);
+        //    hexGrid.AddCity(xity);
+             //   Cities.Add(city);
+            
         }
         else if (building == "airport")
         {
@@ -160,6 +163,7 @@ public class HexCell:MonoBehaviour{
 
     private void Awake() 
     {
+        
         //Fills the neighborNum list with garbage that can be filtered out later
         for (int i = 0; i < 6; i++)
             neighborNum[i] = int.MaxValue;
@@ -181,6 +185,31 @@ public class HexCell:MonoBehaviour{
             Destroy(child.gameObject);
         //Replaces models
         render();
+
+       
+    }
+
+
+    
+
+    public static Vector3 GetCitiesInRange(HexCell hex, int range)
+    {
+        
+        List<HexCell> hexes = hex.GetRadiusOfCells(hex, 1);
+        foreach (HexCell h in hexes)
+        {
+            if (h.name == "city")
+            {
+
+                return h.Position;
+
+            }
+        }
+        Vector3 nonexistant = new Vector3();
+        nonexistant.x = -1;
+        nonexistant.y = -1;
+        nonexistant.z = -1;
+        return nonexistant;
     }
 
     public Color Color { //Accessor for color
@@ -684,9 +713,11 @@ public class HexCell:MonoBehaviour{
         neighborNum = data.neighbors;
     }
 
+
+
     public void OnEnable()
     {
-        Debug.Log("enabled cell " + cellNum);
+       // Debug.Log("enabled cell " + cellNum);
         SaveData.OnBeforeLoaded += delegate {
             Destroy(this, 0);
             Debug.Log("Should destroy here");
@@ -725,7 +756,7 @@ public class HexCell:MonoBehaviour{
 
     public void OnDisable()
     {
-        Debug.Log("disabled cell " +cellNum);
+      //  Debug.Log("disabled cell " +cellNum);
         SaveData.OnBeforeLoaded += delegate { Destroy(this, 0); };
         SaveData.OnLoaded += delegate {
             if (this != null)
@@ -789,8 +820,6 @@ public class HexCellData
     [XmlArray("neighbors")]
     public int[] neighbors;
 }
-
-
 
 [XmlRoot("HexCellCollection")]
 public class HexCellContainer 
