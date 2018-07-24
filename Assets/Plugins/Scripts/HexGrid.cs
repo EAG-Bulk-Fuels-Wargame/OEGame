@@ -40,7 +40,10 @@ public class HexGrid : MonoBehaviour
     private Airport aport;
     private List<Nuclear> nukes;
     private Nuclear nuke;
-
+    private List<PowerPlant> pplants;
+    private PowerPlant pplant;
+    private List<Depot> depots;
+    private Depot depot;
 
 
     private void Awake()
@@ -291,6 +294,8 @@ public class HexGrid : MonoBehaviour
         Turbines = new List<WindTurbine>();
         airports = new List<Airport>();
         nukes = new List<Nuclear>();
+        pplants = new List<PowerPlant>();
+        depots = new List<Depot>();
 
 
         cells[41].Color = city;
@@ -407,10 +412,8 @@ public class HexGrid : MonoBehaviour
 
             if (cell.building == "city")
             {
-
                 xity = new City(cell.name, 32, 0, 1, cell);
                 Cities.Add(xity);
-
             }
             else if (cell.building == "turbine")
             {
@@ -427,7 +430,17 @@ public class HexGrid : MonoBehaviour
                 nuke = new Nuclear(cell.name, 100);
                 nukes.Add(nuke);
             }
-
+            else if (cell.building == "power")
+            {
+                pplant = new PowerPlant(cell.name, 100);
+                pplants.Add(pplant);
+            }
+            else if (cell.building == "fuel")
+            {
+                depot = new Depot(cell.name, 100);
+                depots.Add(depot);
+            }
+            else { }
         }
         //  int bleh = Cities.Count;
 
