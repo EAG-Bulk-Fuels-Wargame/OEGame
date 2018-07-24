@@ -406,6 +406,8 @@ public class HexGrid : MonoBehaviour
         cells[247].Color = pipeline;
         cells[247].name = "Pipeline Station";
         cells[247].building = "pipeline";
+   //     Debug.Log(cells.Count);
+
 
         foreach (HexCell cell in cells)
         {
@@ -414,6 +416,7 @@ public class HexGrid : MonoBehaviour
             {
                 xity = new City(cell.name, 32, 0, 1, cell);
                 Cities.Add(xity);
+               // Debug.Log(xity.GetName());
             }
             else if (cell.building == "turbine")
             {
@@ -440,37 +443,36 @@ public class HexGrid : MonoBehaviour
                 depot = new Depot(cell.name, 100);
                 depots.Add(depot);
             }
-            else { }
+            else
+            {
+
+            }
         }
         //  int bleh = Cities.Count;
 
-        for (int i = 0; i < Cities.Count; i++)
+        //for (int i = 0; i < Cities.Count; i++)
+        //   {
+        //      Debug.Log(Cities[i].GetName());
+        //  }
+        int helper = Cities.Count;
+
+        for (int i = 0; i < helper; i++)
         {
-
-
-            for (int x = 0; x < Cities.Count; x++)
+            for (int x = 0; x < helper; x++)
             {
                 if (Cities[i].GetName() == Cities[x].GetName())
                 {
                     Cities[i].CityMerge(Cities[x]);
                     Cities.RemoveAt(x);
-                    //  x--;
-                    // bleh--;
-
+                    helper--; 
                 }
-                else { }
-
             }
-
+         
         }
-
-
-
-
 
         for (int i = 0; i < Cities.Count; i++)
         {
-            Debug.Log(Cities[i].GetName());
+        Debug.Log(Cities[i].GetName());
         }
 
 
