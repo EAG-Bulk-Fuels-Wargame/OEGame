@@ -34,6 +34,12 @@ public class HexGrid : MonoBehaviour
     private GameObject[] cities;
     private List<City> Cities;
     private City xity;
+    private List<WindTurbine> Turbines;
+    private WindTurbine turbo;
+    private List<Airport> airports;
+    private Airport aport;
+    private List<Nuclear> nukes;
+    private Nuclear nuke;
 
 
 
@@ -112,7 +118,7 @@ public class HexGrid : MonoBehaviour
         HexCoordinates coordinates = HexCoordinates.FromPosition(position);
         int index =
             coordinates.X + coordinates.Z * cellCountX + coordinates.Z / 2;
-        Debug.Log(index);
+ //       Debug.Log(index);
         if (index <= cells.Count)
             return cells[index];
         else
@@ -282,6 +288,10 @@ public class HexGrid : MonoBehaviour
         }
 
         Cities = new List<City>();
+        Turbines = new List<WindTurbine>();
+        airports = new List<Airport>();
+        nukes = new List<Nuclear>();
+
 
         cells[41].Color = city;
         cells[41].name = "South City";
@@ -397,15 +407,26 @@ public class HexGrid : MonoBehaviour
 
             if (cell.building == "city")
             {
-                //
+
                 xity = new City(cell.name, 32, 0, 1, cell);
                 Cities.Add(xity);
-                //   Debug.Log("inside"); 
-                //Debug.Log(Cities.Count);
+
             }
-
-
-            //Debug.Log(Cities.Count);
+            else if (cell.building == "turbine")
+            {
+                turbo = new WindTurbine(cell.name, 100);
+                Turbines.Add(turbo);
+            }
+            else if (cell.building == "airport")
+            {
+                aport = new Airport(cell.name, 100);
+                airports.Add(aport);
+            }
+            else if (cell.building == "nuclear")
+            {
+                nuke = new Nuclear(cell.name, 100);
+                nukes.Add(nuke);
+            }
 
         }
         //  int bleh = Cities.Count;
@@ -424,10 +445,15 @@ public class HexGrid : MonoBehaviour
                     // bleh--;
 
                 }
+                else { }
 
             }
 
         }
+
+
+
+
 
         for (int i = 0; i < Cities.Count; i++)
         {

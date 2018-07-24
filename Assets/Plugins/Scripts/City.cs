@@ -34,12 +34,12 @@ public class City : MonoBehaviour {
         //  HexCell[] hexes = new HexCell[count];
         // hexes[0] = inti;
         isfortified = false;
-     //   position = vec;
-      //  position.x = transform.position.x;
-     //   position.y = transform.position.y;
+       //position = vec;
+       // position.x = transform.position.x;
+       //position.y = transform.position.y;
        // position.z = transform.position.z - 10;
-        //transform.localPosition = vec;
-      //  transform.SetParent(transform);
+       //transform.localPosition = vec;
+       //  transform.SetParent(transform);
 
     }
 

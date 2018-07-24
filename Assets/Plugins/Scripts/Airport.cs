@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Airport : MonoBehaviour {
-    private int health;
+    private string name;
     private float effectiveness;
     private int planeAmt;
-    public Airport()
+    public Airport(int num)
     {
-        health = 100;
+        name = name + num;
         effectiveness = 100;
-        planeAmt = 5;
-     
+       
 
     }
-	
+    public Airport(string nam,float effect )
+    {
+        name = nam;
+        effectiveness = 100;
+        
+
+    }
+
 }
