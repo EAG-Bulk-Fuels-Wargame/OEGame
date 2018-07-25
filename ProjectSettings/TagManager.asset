@@ -18,6 +18,7 @@ TagManager:
   - InputBox
   - PopUpUI
   - BG
+  - TopBar
   layers:
   - Default
   - TransparentFX
